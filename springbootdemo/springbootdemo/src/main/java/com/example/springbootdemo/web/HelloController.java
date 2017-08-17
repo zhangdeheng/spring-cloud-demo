@@ -1,6 +1,8 @@
 package com.example.springbootdemo.web;
 
 
+import java.util.Random;
+
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
@@ -17,8 +19,12 @@ public class HelloController {
 	@Resource 
 	private DiscoveryClient client;
 	@RequestMapping(value="/hello", method=RequestMethod.GET)
-	public String index(){
+	public String index() throws Exception{
 		ServiceInstance instance=client.getLocalServiceInstance();
+		//让处理线程等待几秒钟
+//		int sleepTime=new Random().nextInt(3000);
+//		logger.info("sleepTime:"+sleepTime);
+//		Thread.sleep(sleepTime);
 //		/hello,hostzhangdeheng,service_id:springcloudDemo
 		logger.info("/hello,host"+instance.getHost()+",service_id:"+instance.getServiceId());
 		
