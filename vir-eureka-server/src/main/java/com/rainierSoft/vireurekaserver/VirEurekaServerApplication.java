@@ -11,3 +11,4 @@ public class VirEurekaServerApplication {
 		SpringApplication.run(VirEurekaServerApplication.class, args);
 	}
 }
+ 
