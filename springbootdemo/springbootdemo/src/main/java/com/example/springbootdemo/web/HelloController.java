@@ -1,8 +1,6 @@
 package com.example.springbootdemo.web;
 
 
-import java.util.Random;
-
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
