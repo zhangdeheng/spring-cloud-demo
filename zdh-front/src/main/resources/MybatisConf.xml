@@ -4,6 +4,8 @@
 	<typeAliases>
 		<typeAlias type="org.zdh.customermgr.vo.CustomerModel" alias="CM"/>
 		<typeAlias type="org.zdh.customermgr.vo.CustomerQueryModel" alias="CQ"/>
+		<typeAlias type="org.zdh.goodsmgr.vo.GoodsModel" alias="GM"/>
+		<typeAlias type="org.zdh.goodsmgr.vo.GoodsQueryModel" alias="GQM"/>
 	</typeAliases>
 	<plugins>
 		<plugin interceptor="org.zdh.common.pageutil.PagePlugin">
