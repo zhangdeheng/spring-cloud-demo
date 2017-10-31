@@ -44,6 +44,12 @@
 			<version>0.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
+		<dependency>
+			<groupId>com.zdh.appframework</groupId>
+			<artifactId>zdh-front</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>zdh-totalweb</finalName>
@@ -74,6 +80,10 @@
 						<overlay>
 							<groupId>com.zdh.appframework</groupId>
 							<artifactId>zdh-goodmgrweb</artifactId>
+						</overlay>
+						<overlay>
+							<groupId>com.zdh.appframework</groupId>
+							<artifactId>zdh-front</artifactId>
 						</overlay>
 					</overlays>
 				</configuration>

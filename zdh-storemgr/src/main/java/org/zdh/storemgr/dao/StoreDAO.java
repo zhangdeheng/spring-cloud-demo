@@ -7,5 +7,5 @@ import org.zdh.storemgr.vo.StoreQueryModel;
 
 @Repository
 public interface StoreDAO extends BaseDAO<StoreModel,StoreQueryModel>{
-	
+	public StoreModel getByGoodsUuid(int goodsUuid);
 }

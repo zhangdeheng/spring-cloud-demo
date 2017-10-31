@@ -6,6 +6,6 @@ import org.zdh.storemgr.vo.StoreModel;
 import org.zdh.storemgr.vo.StoreQueryModel;
 
 public interface IStoreService extends IBaseService<StoreModel,StoreQueryModel>{
-	
+	public StoreModel getByGoodsUuid(int goodsUuid);
 }
 

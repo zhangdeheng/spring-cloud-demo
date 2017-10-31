@@ -7,6 +7,7 @@ import org.zdh.ordermgr.vo.OrderModel;
 import org.zdh.ordermgr.vo.OrderQueryModel;
 
 public interface IOrderService extends IBaseService<OrderModel,OrderQueryModel>{
+	public void order(int customerUuid);
 	
 }
 

@@ -12,11 +12,47 @@
   <name>zdh-ordermgr Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>4.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-pool</artifactId>
+			<version>5.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>5.9.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.xbean</groupId>
+			<artifactId>xbean-spring</artifactId>
+			<version>3.16</version>
+		</dependency>
+  		
 		<dependency>
 			<groupId>com.zdh.appframework</groupId>
 			<artifactId>zdh-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<!-- <dependency>
+			<groupId>com.zdh.appframework</groupId>
+			<artifactId>zdh-cartmgr</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<classifier>api</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.zdh.appframework</groupId>
+			<artifactId>zdh-storemgr</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<classifier>api</classifier>
+		</dependency> -->
 	</dependencies>
   <build>
     <finalName>zdh-ordermgr</finalName>
@@ -40,6 +76,18 @@
 						</connector>
 					</connectors>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<!--注意增加这两行，在打包时相关的类会被独立打成jar -->
+					<attachClasses>true</attachClasses>
+					<classesClassifier>api</classesClassifier>
+				</configuration>
+				<version>2.4</version>
+				<executions>
+				</executions>
 			</plugin>
     	</plugins>
     </pluginManagement>

@@ -6,4 +6,5 @@ import org.zdh.customermgr.vo.CustomerModel;
 import org.zdh.customermgr.vo.CustomerQueryModel;
 @Repository
 public interface CustomerDAO extends BaseDAO<CustomerModel, CustomerQueryModel>{
+	public CustomerModel getByCustomerId(String customerId);
 }
