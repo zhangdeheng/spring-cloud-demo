@@ -34,7 +34,7 @@ public class LoginController {
 		if(cm==null || cm.getUuid()<=0){
 			return "login";
 		}
-		
+		//添加登陆人的cookie 方便之后使用 如添加购物车时记录是谁添加的等
 		Cookie c = new Cookie("MyLogin",cm.getUuid()+","+System.currentTimeMillis());
 		response.addCookie(c);
 		
